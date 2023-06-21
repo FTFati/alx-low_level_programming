@@ -22,7 +22,7 @@ int main(void)
 			b = c, c = b + c;
 			printf("%d", c);
 		}
-		if (i!= 97)
+		if (i != 97)
 			printf(", ");
 	}
 	printf("\n");
