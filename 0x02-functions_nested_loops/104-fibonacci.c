@@ -6,28 +6,29 @@
 */
 int main(void)
 {
-	int i = 0, j = 0, a = 1, b = 2;
-	int k1, k2, k3, c;
+	unsigned long int fr1 = 0, bk1 = 1, fr2 = 0, bk2 = 2;
+	unsigned long int hold1, hold2, hold3;
+	int count;
 
-	printf("%d, %d, ", a, b);
-	for (c = 2; c < 98; c++)
+	printf("%lu, %lu, ", bk1, bk2);
+	for (count = 2; count < 98; count++)
 	{
-		if (a + b > Const || j > 0 || i > 0)
+		if (bk1 + bk2 > Const || fr2 > 0 || fr1 > 0)
 		{
-			k1 = (a + b) / Const;
-			k2 = (a + b) % Const;
-			k3 = i + j + k1;
-			i = j, j = k3;
-			a = b, b = k2;
-			printf("%d, %d", j, b);
+			hold1 = (bk1 + bk2) / Const;
+			hold2 = (bk1 + bk2) % Const;
+			hold3 = fr1 + fr2 + hold1;
+			fr1 = fr2, fr2 = hold3;
+			bk1 = bk2, bk2 = hold2;
+			printf("%lu%010lu", fr2, bk2);
 		}
 		else
 		{
-			k2 = a + b;
-			a = b, b = k2;
-			printf("%d", b);
+			hold2 = bk1 + bk2;
+			bk1 = bk2, bk2 = hold2;
+			printf("%lu", bk2);
 		}
-		if (c != 97)
+		if (count != 97)
 			printf(", ");
 	}
 	printf("\n");
