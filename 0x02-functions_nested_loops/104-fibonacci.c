@@ -1,4 +1,5 @@
 #include <stdio.h>
+#include "main.h"
 #define Const 10000000000
 /**
 * main - Finds and print the first 98 fib numbers starting with 1 and 2.
