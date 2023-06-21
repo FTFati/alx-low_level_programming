@@ -6,23 +6,28 @@
 */
 int main(void)
 {
-	int i, a = 0, b = 1, j = 0, c = 2;
+	int i = 0, j = 0, a = 1, b = 2;
+	int k1, k2, k3, c;
 
-	printf("%d, %d", b, c);
-	for (i = 2; i < 98; i++)
+	printf("%d, %d, ", a, b);
+	for (c = 2; c < 98; c++)
 	{
-		if (b + c > Const || a > 0 || j > 0)
+		if (a + b > Const || j > 0 || i > 0)
 		{
-			a = j, j = a + j + (b + c) / Const;
-			b = c, c = (b + c) % Const;
-			printf("%d, %d", j, c);
+			k1 = (a + b) / Const;
+			k2 = (a + b) % Const;
+			k3 = i + j + k1;
+			i = j, j = k3;
+			a = b, b = k2;
+			printf("%d, %d", j, b);
 		}
 		else
 		{
-			b = c, c = b + c;
-			printf("%d", c);
+			k2 = a + b;
+			a = b, b = k2;
+			printf("%d", b);
 		}
-		if (i != 97)
+		if (c != 97)
 			printf(", ");
 	}
 	printf("\n");
