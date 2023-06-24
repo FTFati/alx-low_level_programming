@@ -2,29 +2,27 @@
 
 /**
 *print_triangle - prints a triangle Use the character #
-*@size: The charater to print
+*@size: is the size of the triangle
 * Return: void
 */
+
 void print_triangle(int size)
 {
-	int a, b, c;
+	int row, col;
 
-	if (size <= 0)
+	if (size > 0)
 	{
-		_putchar('\n');
-	}
-	else
-	{
-		for (a = 1; a < size; a++)
+		for (row = 1; row <= size; row++)
 		{
-			for (b = size - a; b > 1; b--)
-			{
-				_putchar(32);
-			}
-			for (c = 0; c <= a; b++)
-			{
-				_putchar(35);
-			}
+			for (col = size - row; col > 0; col--)
+				_putchar(' ');
+
+			for (col = 0; col < row; col++)
+				_putchar('#');
+
+			if (row == size)
+				continue;
+			_putchar('\n');
 		}
 	}
 	_putchar('\n');
