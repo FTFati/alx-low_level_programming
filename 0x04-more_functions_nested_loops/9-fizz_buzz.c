@@ -1,7 +1,7 @@
 #include <stdio.h>
 
 /**
-* main -prints the numbers from 1 to 100, But for multiples of 3 print Fizz and for the multiples of 5 print Buzz
+* main -prints the numbers from 1 to 100, for mult of 3 and 5 print fizz Buzz
 *
 * Return: Always 0.
 */
