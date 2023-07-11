@@ -2,7 +2,7 @@
 #include <stdlib.h>
 #include <stdio.h>
 /**
- * _strdup - function that returns a pointer to a newly allocated space in memory
+ * _strdup - function returns a newly allocated space in memory
  * @str: string to allocate memory for
  * Return: Pointer
  */
