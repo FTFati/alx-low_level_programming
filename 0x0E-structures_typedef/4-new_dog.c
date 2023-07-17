@@ -1,7 +1,7 @@
-#include "dog.h"
 #include <stdlib.h>
+#include "dog.h"
 /**
- * new_dog - function that creates a new dog
+ * *new_dog - function that creates a new dog
  * @name: dog's name
  * @age: dog's age
  * @owner: dog's owner
