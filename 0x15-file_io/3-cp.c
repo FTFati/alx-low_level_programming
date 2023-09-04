@@ -1,4 +1,9 @@
 #include <stdio.h>
+#include <unistd.h>
+#include <sys/types.h>
+#include <sys/stat.h>
+#include <fcntl.h>
+#include <stdlib.h>
 /**
   * main - main program that copies the content of a file to another file
   * @ac: argument count
@@ -9,7 +14,7 @@ int main(int ac, char *av[])
 {
 	int fd_from, fd_to, rd_stat, wr_stat;
 	mode_t perm = S_IRUSR | S_IWUSR | S_IWGRP | S_IRGRP | S_IROTH;
-	char buffer[BUFSIZE];
+	char buffer[1204];
 
 	if (ac != 3)
 		dprintf(STDERR_FILENO, "Usage: cp file_from file_to\n"), exit(97);
@@ -22,7 +27,7 @@ int main(int ac, char *av[])
 	rd_stat = 1;
 	while (rd_stat)
 	{
-		rd_stat = read(fd_from, buffer, BUFSIZE);
+		rd_stat = read(fd_from, buffer, 1024);
 		if (rd_stat == -1)
 			dprintf(STDERR_FILENO, "Error: Can't read from file %s\n", av[1]), exit(98);
 		if (rd_stat > 0)
