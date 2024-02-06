@@ -1,2 +1,3 @@
-#space complexity of an iterative linear search algorithm in an array of size n
+#space complexity of an iterative (worst case)
+#linear search algorithm in an array of size n
 O(1)
